@@ -1,0 +1,516 @@
+doctype html
+html(dir='ltr', lang='en-US')
+  head
+    meta(charset='utf-8')
+    meta(http-equiv='X-UA-Compatible', content='IE=edge')
+    meta(name='viewport', content='width=device-width, initial-scale=1')
+    
+    title #{title}
+    
+    link(rel='apple-touch-icon', sizes='57x57', href='assets/images/favicons/apple-icon-57x57.png')
+    link(rel='apple-touch-icon', sizes='60x60', href='assets/images/favicons/apple-icon-60x60.png')
+    link(rel='apple-touch-icon', sizes='72x72', href='assets/images/favicons/apple-icon-72x72.png')
+    link(rel='apple-touch-icon', sizes='76x76', href='assets/images/favicons/apple-icon-76x76.png')
+    link(rel='apple-touch-icon', sizes='114x114', href='assets/images/favicons/apple-icon-114x114.png')
+    link(rel='apple-touch-icon', sizes='120x120', href='assets/images/favicons/apple-icon-120x120.png')
+    link(rel='apple-touch-icon', sizes='144x144', href='assets/images/favicons/apple-icon-144x144.png')
+    link(rel='apple-touch-icon', sizes='152x152', href='assets/images/favicons/apple-icon-152x152.png')
+    link(rel='apple-touch-icon', sizes='180x180', href='assets/images/favicons/apple-icon-180x180.png')
+    link(rel='icon', type='image/png', sizes='192x192', href='assets/images/favicons/android-icon-192x192.png')
+    link(rel='icon', type='image/png', sizes='32x32', href='assets/images/favicons/favicon-32x32.png')
+    link(rel='icon', type='image/png', sizes='96x96', href='assets/images/favicons/favicon-96x96.png')
+    link(rel='icon', type='image/png', sizes='16x16', href='assets/images/favicons/favicon-16x16.png')
+    link(rel='manifest', href='/manifest.json')
+    meta(name='msapplication-TileColor', content='#ffffff')
+    meta(name='msapplication-TileImage', content='assets/images/favicons/ms-icon-144x144.png')
+    meta(name='theme-color', content='#ffffff')
+    //
+      Stylesheets
+      =============================================
+    // Default stylesheets
+    link(href='assets/lib/bootstrap/dist/css/bootstrap.min.css', rel='stylesheet')
+    // Template specific stylesheets
+    link(href='https://fonts.googleapis.com/css?family=Roboto+Condensed:400,700', rel='stylesheet')
+    link(href='https://fonts.googleapis.com/css?family=Volkhov:400i', rel='stylesheet')
+    link(href='https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800', rel='stylesheet')
+    link(href='assets/lib/animate.css/animate.css', rel='stylesheet')
+    link(href='assets/lib/components-font-awesome/css/font-awesome.min.css', rel='stylesheet')
+    link(href='assets/lib/et-line-font/et-line-font.css', rel='stylesheet')
+    link(href='assets/lib/flexslider/flexslider.css', rel='stylesheet')
+    link(href='assets/lib/owl.carousel/dist/assets/owl.carousel.min.css', rel='stylesheet')
+    link(href='assets/lib/owl.carousel/dist/assets/owl.theme.default.min.css', rel='stylesheet')
+    link(href='assets/lib/magnific-popup/dist/magnific-popup.css', rel='stylesheet')
+    link(href='assets/lib/simple-text-rotator/simpletextrotator.css', rel='stylesheet')
+    // Main stylesheet and color file
+    link(href='assets/css/style.css', rel='stylesheet')
+    link#color-scheme(href='assets/css/colors/default.css', rel='stylesheet')
+  body(data-spy='scroll', data-target='.onpage-navigation', data-offset='60')
+    main
+      .page-loader
+        .loader Loading...
+      nav.navbar.navbar-custom.navbar-fixed-top(role='navigation')
+        .container
+          .navbar-header
+            button.navbar-toggle(type='button', data-toggle='collapse', data-target='#custom-collapse')
+              span.sr-only Toggle navigation
+              span.icon-bar
+              span.icon-bar
+              span.icon-bar
+            a.navbar-brand(href='index.html') Titan
+          #custom-collapse.collapse.navbar-collapse
+            ul.nav.navbar-nav.navbar-right
+              li.dropdown
+                a.dropdown-toggle(href='#', data-toggle='dropdown') Home
+                ul.dropdown-menu
+                  li
+                    a(href='index_mp_fullscreen_video_background.html') Default
+                  li
+                    a(href='index_op_fullscreen_gradient_overlay.html') One Page
+                  li
+                    a(href='index_agency.html') Agency
+                  li
+                    a(href='index_portfolio.html') Portfolio
+                  li
+                    a(href='index_restaurant.html') Restaurant
+                  li
+                    a(href='index_finance.html') Finance
+                  li
+                    a(href='index_landing.html') Landing Page
+                  li
+                    a(href='index_photography.html') Photography
+                  li
+                    a(href='index_shop.html') Shop
+              li.dropdown
+                a.dropdown-toggle(href='#', data-toggle='dropdown') Headers
+                ul.dropdown-menu
+                  li.dropdown
+                    a.dropdown-toggle(href='#', data-toggle='dropdown') Static Image Header
+                    ul.dropdown-menu
+                      li
+                        a(href='index_mp_fullscreen_static.html') Fulscreen
+                      li
+                        a(href='index_mp_classic_static.html') Classic
+                  li.dropdown
+                    a.dropdown-toggle(href='#', data-toggle='dropdown') Flexslider Header
+                    ul.dropdown-menu
+                      li
+                        a(href='index_mp_fullscreen_flexslider.html') Fulscreen
+                      li
+                        a(href='index_mp_classic_flexslider.html') Classic
+                  li.dropdown
+                    a.dropdown-toggle(href='#', data-toggle='dropdown') Video Background Header
+                    ul.dropdown-menu
+                      li
+                        a(href='index_mp_fullscreen_video_background.html') Fulscreen
+                      li
+                        a(href='index_mp_classic_video_background.html') Classic
+                  li.dropdown
+                    a.dropdown-toggle(href='#', data-toggle='dropdown') Text Rotator Header
+                    ul.dropdown-menu
+                      li
+                        a(href='index_mp_fullscreen_text_rotator.html') Fulscreen
+                      li
+                        a(href='index_mp_classic_text_rotator.html') Classic
+                  li.dropdown
+                    a.dropdown-toggle(href='#', data-toggle='dropdown') Gradient Overlay Header
+                    ul.dropdown-menu
+                      li
+                        a(href='index_mp_fullscreen_gradient_overlay.html') Fulscreen
+                      li
+                        a(href='index_mp_classic_gradient_overlay.html') Classic
+              li.dropdown
+                a.dropdown-toggle(href='#', data-toggle='dropdown') Pages
+                ul.dropdown-menu
+                  li.dropdown
+                    a.dropdown-toggle(href='#', data-toggle='dropdown') About
+                    ul.dropdown-menu
+                      li
+                        a(href='about1.html') About 1
+                      li
+                        a(href='about2.html') About 2
+                      li
+                        a(href='about3.html') About 3
+                      li
+                        a(href='about4.html') About 4
+                      li
+                        a(href='about5.html') About 5
+                  li.dropdown
+                    a.dropdown-toggle(href='#', data-toggle='dropdown') Services
+                    ul.dropdown-menu
+                      li
+                        a(href='service1.html') Service 1
+                      li
+                        a(href='service2.html') Service 2
+                      li
+                        a(href='service3.html') Service 3
+                  li.dropdown
+                    a.dropdown-toggle(href='#', data-toggle='dropdown') Pricing
+                    ul.dropdown-menu
+                      li
+                        a(href='pricing1.html') Pricing 1
+                      li
+                        a(href='pricing2.html') Pricing 2
+                  li.dropdown
+                    a.dropdown-toggle(href='#', data-toggle='dropdown') Gallery
+                    ul.dropdown-menu
+                      li
+                        a(href='gallery_col_2.html') 2 Columns
+                      li
+                        a(href='gallery_col_3.html') 3 Columns
+                      li
+                        a(href='gallery_col_4.html') 4 Columns
+                      li
+                        a(href='gallery_col_6.html') 6 Columns
+                  li.dropdown
+                    a.dropdown-toggle(href='#', data-toggle='dropdown') Contact
+                    ul.dropdown-menu
+                      li
+                        a(href='contact1.html') Contact 1
+                      li
+                        a(href='contact2.html') Contact 2
+                      li
+                        a(href='contact3.html') Contact 3
+                  li.dropdown
+                    a.dropdown-toggle(href='#', data-toggle='dropdown') Restaurant menu
+                    ul.dropdown-menu
+                      li
+                        a(href='restaurant_menu1.html') Menu 2 Columns
+                      li
+                        a(href='restaurant_menu2.html') Menu 3 Columns
+                  li
+                    a(href='login_register.html') Login / Register
+                  li
+                    a(href='faq.html') FAQ
+                  li
+                    a(href='404.html') Page 404
+              li.dropdown
+                a.dropdown-toggle(href='#', data-toggle='dropdown') Portfolio
+                ul.dropdown-menu(role='menu')
+                  li.dropdown
+                    a.dropdown-toggle(href='#', data-toggle='dropdown') Boxed
+                    ul.dropdown-menu
+                      li
+                        a(href='portfolio_boxed_col_2.html') 2 Columns
+                      li
+                        a(href='portfolio_boxed_col_3.html') 3 Columns
+                      li
+                        a(href='portfolio_boxed_col_4.html') 4 Columns
+                  li.dropdown
+                    a.dropdown-toggle(href='#', data-toggle='dropdown') Boxed - Gutter
+                    ul.dropdown-menu
+                      li
+                        a(href='portfolio_boxed_gutter_col_2.html') 2 Columns
+                      li
+                        a(href='portfolio_boxed_gutter_col_3.html') 3 Columns
+                      li
+                        a(href='portfolio_boxed_gutter_col_4.html') 4 Columns
+                  li.dropdown
+                    a.dropdown-toggle(href='#', data-toggle='dropdown') Full Width
+                    ul.dropdown-menu
+                      li
+                        a(href='portfolio_full_width_col_2.html') 2 Columns
+                      li
+                        a(href='portfolio_full_width_col_3.html') 3 Columns
+                      li
+                        a(href='portfolio_full_width_col_4.html') 4 Columns
+                  li.dropdown
+                    a.dropdown-toggle(href='#', data-toggle='dropdown') Full Width - Gutter
+                    ul.dropdown-menu
+                      li
+                        a(href='portfolio_full_width_gutter_col_2.html') 2 Columns
+                      li
+                        a(href='portfolio_full_width_gutter_col_3.html') 3 Columns
+                      li
+                        a(href='portfolio_full_width_gutter_col_4.html') 4 Columns
+                  li.dropdown
+                    a.dropdown-toggle(href='#', data-toggle='dropdown') Masonry
+                    ul.dropdown-menu
+                      li.dropdown
+                        a.dropdown-toggle(href='#', data-toggle='dropdown') Boxed
+                        ul.dropdown-menu
+                          li
+                            a(href='portfolio_masonry_boxed_col_2.html') 2 Columns
+                          li
+                            a(href='portfolio_masonry_boxed_col_3.html') 3 Columns
+                          li
+                            a(href='portfolio_masonry_boxed_col_4.html') 4 Columns
+                      li.dropdown
+                        a.dropdown-toggle(href='#', data-toggle='dropdown') Full Width
+                        ul.dropdown-menu
+                          li
+                            a(href='portfolio_masonry_full_width_col_2.html') 2 Columns
+                          li
+                            a(href='portfolio_masonry_full_width_col_3.html') 3 Columns
+                          li
+                            a(href='portfolio_masonry_full_width_col_4.html') 4 Columns
+                  li.dropdown
+                    a.dropdown-toggle(href='#', data-toggle='dropdown') Hover Style
+                    ul.dropdown-menu
+                      li
+                        a(href='portfolio_hover_black.html') Black
+                      li
+                        a(href='portfolio_hover_gradient.html') Gradient
+                  li.dropdown
+                    a.dropdown-toggle(href='#', data-toggle='dropdown') Single
+                    ul.dropdown-menu
+                      li.dropdown
+                        a.dropdown-toggle(href='#', data-toggle='dropdown') Featured Image
+                        ul.dropdown-menu
+                          li
+                            a(href='portfolio_single_featured_image1.html') Style 1
+                          li
+                            a(href='portfolio_single_featured_image2.html') Style 2
+                      li.dropdown
+                        a.dropdown-toggle(href='#', data-toggle='dropdown') Featured Slider
+                        ul.dropdown-menu
+                          li
+                            a(href='portfolio_single_featured_slider1.html') Style 1
+                          li
+                            a(href='portfolio_single_featured_slider2.html') Style 2
+                      li.dropdown
+                        a.dropdown-toggle(href='#', data-toggle='dropdown') Featured Video
+                        ul.dropdown-menu
+                          li
+                            a(href='portfolio_single_featured_video1.html') Style 1
+                          li
+                            a(href='portfolio_single_featured_video2.html') Style 2
+              li.dropdown
+                a.dropdown-toggle(href='#', data-toggle='dropdown') Blog
+                ul.dropdown-menu(role='menu')
+                  li.dropdown
+                    a.dropdown-toggle(href='#', data-toggle='dropdown') Standard
+                    ul.dropdown-menu
+                      li
+                        a(href='blog_standard_left_sidebar.html') Left Sidebar
+                      li
+                        a(href='blog_standard_right_sidebar.html') Right Sidebar
+                  li.dropdown
+                    a.dropdown-toggle(href='#', data-toggle='dropdown') Grid
+                    ul.dropdown-menu
+                      li
+                        a(href='blog_grid_col_2.html') 2 Columns
+                      li
+                        a(href='blog_grid_col_3.html') 3 Columns
+                      li
+                        a(href='blog_grid_col_4.html') 4 Columns
+                  li.dropdown
+                    a.dropdown-toggle(href='#', data-toggle='dropdown') Masonry
+                    ul.dropdown-menu
+                      li
+                        a(href='blog_grid_masonry_col_2.html') 2 Columns
+                      li
+                        a(href='blog_grid_masonry_col_3.html') 3 Columns
+                      li
+                        a(href='blog_grid_masonry_col_4.html') 4 Columns
+                  li.dropdown
+                    a.dropdown-toggle(href='#', data-toggle='dropdown') Single
+                    ul.dropdown-menu
+                      li
+                        a(href='blog_single_left_sidebar.html') Left Sidebar
+                      li
+                        a(href='blog_single_right_sidebar.html') Right Sidebar
+              li.dropdown
+                a.dropdown-toggle(href='#', data-toggle='dropdown') Features
+                ul.dropdown-menu(role='menu')
+                  li
+                    a(href='alerts-and-wells.html')
+                      i.fa.fa-bolt
+                      |  Alerts and Wells
+                  li
+                    a(href='buttons.html')
+                      i.fa.fa-link.fa-sm
+                      |  Buttons
+                  li
+                    a(href='tabs_and_accordions.html')
+                      i.fa.fa-tasks
+                      |  Tabs & Accordions
+                  li
+                    a(href='content_box.html')
+                      i.fa.fa-list-alt
+                      |  Contents Box
+                  li
+                    a(href='forms.html')
+                      i.fa.fa-check-square-o
+                      |  Forms
+                  li
+                    a(href='icons.html')
+                      i.fa.fa-star
+                      |  Icons
+                  li
+                    a(href='progress-bars.html')
+                      i.fa.fa-server
+                      |  Progress Bars
+                  li
+                    a(href='typography.html')
+                      i.fa.fa-font
+                      |  Typography
+              li.dropdown
+                a.dropdown-toggle(href='#', data-toggle='dropdown') Shop
+                ul.dropdown-menu(role='menu')
+                  li.dropdown
+                    a.dropdown-toggle(href='#', data-toggle='dropdown') Product
+                    ul.dropdown-menu
+                      li
+                        a(href='shop_product_col_3.html') 3 columns
+                      li
+                        a(href='shop_product_col_4.html') 4 columns
+                  li
+                    a(href='shop_single_product.html') Single Product
+                  li
+                    a(href='shop_checkout.html') Checkout
+              // li.dropdown.navbar-cart
+              // a.dropdown-toggle(href='#', data-toggle='dropdown')
+              // span.icon-basket
+              // |
+              // span.cart-item-number 2
+              // ul.dropdown-menu.cart-list(role='menu')
+              // li
+              // .navbar-cart-item.clearfix
+              // .navbar-cart-img
+              // a(href='#')
+              // img(src='assets/images/shop/product-9.jpg', alt='')
+              // .navbar-cart-title
+              // a(href='#') Short striped sweater
+              // |
+              // span.cart-amount 2 &times; $119.00
+              // br
+              // |
+              // strong.cart-amount $238.00
+              // li
+              // .navbar-cart-item.clearfix
+              // .navbar-cart-img
+              // a(href='#')
+              // img(src='assets/images/shop/product-10.jpg', alt='')
+              // .navbar-cart-title
+              // a(href='#') Colored jewel rings
+              // |
+              // span.cart-amount 2 &times; $119.00
+              // br
+              // |
+              // strong.cart-amount $238.00
+              // li
+              // .clearfix
+              // .cart-sub-totle
+              // strong Total: $476.00
+              // li
+              // .clearfix
+              // a.btn.btn-block.btn-round.btn-font-w(type='submit') Checkout
+              // li.dropdown
+              // a.dropdown-toggle(href='#', data-toggle='dropdown') Search
+              // ul.dropdown-menu(role='menu')
+              // li
+              // .dropdown-search
+              // form(role='form')
+              // input.form-control(type='text', placeholder='Search...')
+              // |
+              // button.search-btn(type='submit')
+              // i.fa.fa-search
+              li.dropdown
+                a.dropdown-toggle(href='documentation.html', data-toggle='dropdown') Documentation
+                ul.dropdown-menu
+                  li
+                    a(href='documentation.html#contact') Contact Form
+                  li
+                    a(href='documentation.html#reservation') Reservation Form
+                  li
+                    a(href='documentation.html#mailchimp') Mailchimp
+                  li
+                    a(href='documentation.html#gmap') Google Map
+                  li
+                    a(href='documentation.html#plugin') Plugins
+                  li
+                    a(href='documentation.html#changelog') Changelog
+      section.bg-dark-30.showcase-page-header.module.parallax-bg(data-background='assets/images/showcase_bg.jpg')
+        .titan-caption
+          .caption-content
+            .font-alt.mb-30.titan-title-size-1 Powerful. Multipurpose.
+            .font-alt.mb-40.titan-title-size-4 100+ Layouts
+            a.section-scroll.btn.btn-border-w.btn-round(href='#demos') See Demos
+      .main.showcase-page
+        section.module-extra-small.bg-dark
+          .container
+            .row
+              .col-sm-6.col-md-8.col-lg-9
+                .callout-text.font-alt
+                  h4(style='margin-top: 0px; font-;') Start Creating Beautiful Websites
+                  p(style='margin-bottom: 0px;') Download Titan Free today!
+              .col-sm-6.col-md-4.col-lg-3
+                .callout-btn-box
+                  a.btn.btn-border-w.btn-circle(href='https://themewagon.com/themes/titan/') Downlaod Free
+        section#demos.module-medium
+          .container
+            .row.multi-columns-row
+              .col-md-4.col-sm-6.col-xs-12
+                a.content-box(href='index_mp_fullscreen_video_background.html')
+                  .content-box-image
+                    img(src='assets/images/screenshots/main_demo.jpg', alt='Main Demo')
+                  h3.content-box-title.font-serif Main Demo
+              .col-md-4.col-sm-6.col-xs-12
+                a.content-box(href='index_agency.html')
+                  .content-box-image
+                    img(src='assets/images/screenshots/agency.jpg', alt='Agency')
+                  h3.content-box-title.font-serif Agency
+              .col-md-4.col-sm-6.col-xs-12
+                a.content-box(href='index_portfolio.html')
+                  .content-box-image
+                    img(src='assets/images/screenshots/portfolio.jpg', alt='Portfolio')
+                  h3.content-box-title.font-serif Portfolio
+              .col-md-4.col-sm-6.col-xs-12
+                a.content-box(href='index_restaurant.html')
+                  .content-box-image
+                    img(src='assets/images/screenshots/restaurant.jpg', alt='Restaurant')
+                  h3.content-box-title.font-serif Restaurant
+              .col-md-4.col-sm-6.col-xs-12
+                a.content-box(href='index_finance.html')
+                  .content-box-image
+                    img(src='assets/images/screenshots/finance.jpg', alt='Finance')
+                  h3.content-box-title.font-serif Finance
+              .col-md-4.col-sm-6.col-xs-12
+                a.content-box(href='index_landing.html')
+                  .content-box-image
+                    img(src='assets/images/screenshots/landing.jpg', alt='Landing')
+                  h3.content-box-title.font-serif Landing
+              .col-md-4.col-sm-6.col-xs-12
+                a.content-box(href='index_photography.html')
+                  .content-box-image
+                    img(src='assets/images/screenshots/photography.jpg', alt='Photography')
+                  h3.content-box-title.font-serif Photography
+              .col-md-4.col-sm-6.col-xs-12
+                a.content-box(href='index_shop.html')
+                  .content-box-image
+                    img(src='assets/images/screenshots/shop.jpg', alt='Shop')
+                  h3.content-box-title.font-serif Shop
+              .col-md-4.col-sm-6.col-xs-12
+                a.content-box(href='index_op_fullscreen_gradient_overlay.html')
+                  .content-box-image
+                    img(src='assets/images/screenshots/one_page.jpg', alt='One Page')
+                  h3.content-box-title.font-serif One Page
+        section.module-extra-small.bg-dark
+          .container
+            .row
+              .col-sm-6.col-md-8.col-lg-9
+                .callout-text.font-alt
+                  h4(style='margin-top: 0px;') Start Creating Beautiful Websites
+                  p(style='margin-bottom: 0px;') Download Titan Free today!
+              .col-sm-6.col-md-4.col-lg-3
+                .callout-btn-box
+                  a.btn.btn-border-w.btn-circle(href='https://themewagon.com/themes/titan/') Downlaod Free
+      .scroll-up
+        a(href='#totop')
+          i.fa.fa-angle-double-up
+    //
+      JavaScripts
+      =============================================
+    script(src='assets/lib/jquery/dist/jquery.js')
+    script(src='assets/lib/bootstrap/dist/js/bootstrap.min.js')
+    script(src='assets/lib/wow/dist/wow.js')
+    script(src='assets/lib/jquery.mb.ytplayer/dist/jquery.mb.YTPlayer.js')
+    script(src='assets/lib/isotope/dist/isotope.pkgd.js')
+    script(src='assets/lib/imagesloaded/imagesloaded.pkgd.js')
+    script(src='assets/lib/flexslider/jquery.flexslider.js')
+    script(src='assets/lib/owl.carousel/dist/owl.carousel.min.js')
+    script(src='assets/lib/smoothscroll.js')
+    script(src='assets/lib/magnific-popup/dist/jquery.magnific-popup.js')
+    script(src='assets/lib/simple-text-rotator/jquery.simple-text-rotator.min.js')
+    script(src='assets/js/plugins.js')
+    script(src='assets/js/main.js')
