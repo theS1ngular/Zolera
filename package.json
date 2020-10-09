@@ -3,6 +3,9 @@
   "version": "1.0.0",
   "description": "mongodb,express,react,node.js",
   "main": "app.js",
+  "engines": {
+    "node": "^12.16.1"
+  },
   "scripts": {
     "start": "nodemon --exec babel-node app.js --ignore public/",
     "start-webpack": "webpack-dev-server --open --hot --mode development",
