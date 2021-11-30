@@ -1,0 +1,61 @@
+<section class="signup">
+  <div class="container">
+    <div class="signup-content">
+      <div class="signup-form">
+        <h2 class="form-title">Sign up</h2>
+
+        <form #register="ngForm" method="POST" class="register-form" id="register-form">
+
+          <div class="form-group">
+            <label><i class="zmdi zmdi-email"></i></label>
+            <input ngModel email #email="ngModel" name="email" type="email" id="email" placeholder="Your Email" required/>
+          </div>
+
+          <div class="alert" *ngIf="(register.submitted || email.touched) && email.invalid">invalid email</div>
+          <div class="alert" *ngIf="email.valid && register.errors">{{register.errors}}</div>
+
+          <div class="form-group">
+            <label for="pass"><i class="zmdi zmdi-lock"></i></label>
+            <input ngModel #password="ngModel" name="password" type="password" id="pass" placeholder="Password" minlength="8" maxlength="20" required>
+          </div>
+          <div class="alert" *ngIf="(register.submitted || password.touched) && password.invalid">password cant be less than 8 characters</div>
+
+          <div class="form-group">
+            <label for="re-pass"><i class="zmdi zmdi-lock-outline"></i></label>
+            <input ngModel #re_pass="ngModel" name="re_pass" type="password" id="re_pass" placeholder="Repeat your password" minlength="8" maxlength="20" required/>
+          </div>
+          <div class="alert" *ngIf="(register.submitted || re_pass.touched) && password.value !== re_pass.value">passwords must be the same</div>
+
+          <div class="form-group">
+            <input ngModel #terms="ngModel" type="checkbox" name="terms" id="agree-term" class="agree-term" />
+            <label for="agree-term" class="label-agree-term"><span></span>I agree all statements in
+            <a routerLink="/terms" class="term-service">Terms of service</a></label>
+          </div>
+          <div class="alert" *ngIf="(register.submitted || re_pass.touched) && !terms.value">must agree on the terms</div>
+
+          <div class="form-group form-button">
+            <input type="submit" name="signup" id="signup" class="form-submit" value="Register" [disabled]="!terms.value || password.value !== re_pass.value || register.errors || register.invalid"/>
+          </div>
+        </form>
+
+        <div class="social-login">
+          <span class="social-label">Or sign up with</span>
+          <ul class="socials">
+            <li>
+              <a href="#"><i class="display-flex-center zmdi zmdi-facebook"></i></a>
+            </li>
+            <li>
+              <a href="#"><i class="display-flex-center zmdi zmdi-google"></i></a>
+            </li>
+          </ul>
+        </div>
+        <a routerLink="/login" class="signup-image-link">I am already member</a>
+      </div>
+      <div class="signup-image">
+        <figure><img src="assets/images/signup-image.jpg" alt="sing up image"></figure>
+      </div>
+
+    </div>
+  </div>
+</section>
+

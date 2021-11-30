@@ -1,0 +1,24 @@
+{
+  "name": "zolera",
+  "version": "0.0.0",
+  "scripts": {
+
+  },
+  "private": true,
+  "dependencies": {
+    "bcrypt": "^5.0.0",
+    "body-parser": "^1.19.0",
+    "bootstrap": "^5.0.0-alpha1",
+    "connect-mongo": "^3.2.0",
+    "express": "^4.17.1",
+    "express-session": "^1.17.1",
+    "express-validator": "^6.6.1",
+    "jsonwebtoken": "^8.5.1",
+    "mongodb": "^3.6.2",
+    "mongoose": "^5.10.6",
+    "ngx-bootstrap": "^6.1.0"
+  },
+  "devDependencies": {
+
+  }
+}

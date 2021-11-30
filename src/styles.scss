@@ -1,0 +1,8 @@
+$alert: #e72734;
+
+input.ng-touched.ng-invalid {
+  border-bottom: 1px solid $alert;
+}
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }

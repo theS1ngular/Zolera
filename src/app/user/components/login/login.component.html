@@ -1,0 +1,46 @@
+<section class="sign-in">
+  <div class="container">
+    <div class="signin-content">
+      <div class="signin-image">
+        <figure>
+          <img src="./assets/images/signin-image.jpg" alt="sing up image" />
+        </figure>
+      </div>
+
+      <div class="signin-form">
+        <h2 class="form-title">Sign In</h2>
+        <form #login="ngForm" (ngSubmit)="onSubmit(login)" method="POST" class="register-form" id="login-form">
+          <div class="form-group">
+            <label for="email"><i class="zmdi zmdi-account material-icons-name"></i></label>
+            <input ngModel #email="ngModel" name="email" type="email" id="email" placeholder="Your Email" required />
+          </div>
+          <div class="form-group">
+            <label for="your_pass"><i class="zmdi zmdi-lock"></i></label>
+            <input ngModel #password="ngModel" name="password" type="password" id="pass" placeholder="Password" minlength="8" maxlength="20" required />
+          </div>
+
+          <div class="alert" *ngIf="(email.value && password.value) && login.errors">{{ login.errors}}</div>
+          <div class="alert" *ngIf="login.submitted && (!email.value || !password.value)">fields cant be empty</div>
+
+          <div class="form-group form-button">
+            <input class="form-submit"  type="submit" name="signin" id="signin" value="Log in"/>
+          </div>
+        </form>
+
+        <div class="social-login">
+          <span class="social-label">Or login with</span>
+          <ul class="socials">
+            <li>
+              <a href="#"><i class="display-flex-center zmdi zmdi-facebook"></i></a>
+            </li>
+            <li>
+              <a href="#"><i class="display-flex-center zmdi zmdi-google"></i></a>
+            </li>
+          </ul>
+        </div>
+        <a routerLink="/register" class="signup-image-link">Create an account</a>
+
+      </div>
+    </div>
+  </div>
+</section>
