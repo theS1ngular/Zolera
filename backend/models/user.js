@@ -23,7 +23,7 @@ userSchema.statics.authenticate = function(email, password, callback){
 		} else if(!user) {
 			var err = new Error('User is not found');
 			err.status = 401;
-			return callback(err);	
+			return callback(err);
 		}
 		bcrypt.compare(password, user.password, function(error, result){
 			if (result === true) {
@@ -43,7 +43,7 @@ bcrypt.hash(user.password, 10, function (err, hash) {
 	}
 	user.password = hash;
 	next();
-}); 
+});
 });
 
 let User = mongoose.model('User', userSchema);

@@ -2,21 +2,21 @@
 const express = require('express');
 const session = require('express-session');
 const User = require( '../models/user');
-const midware = require('../middleware');
+const middleware = require('../middleware/user');
 const {check, validationResult} = require('express-validator');
 const router = express.Router();
 
-router.get('/', (req, res, next) => {
+router.get('/', middleware.verifyToken,(req, res, next) => {
   let title = 'Titan';
   return res.render('index', {title: title});
 });
 
-router.get('/signup', midware.loggedOut, (req, res, next) => {
+router.get('/signup', (req, res, next) => {
     let title = 'Sign Up';
     return res.render('signup', {title: title});
 });
 
-router.get('/login', midware.loggedOut, (req, res, next) => {
+router.get('/login', (req, res, next) => {
   let title = 'Login';
   return res.render('login', {title: title});
 });
@@ -27,7 +27,7 @@ if (req.session) {
 		if (err) {
 			return next(err);
 		} else {
-		  return res.redirect('/');;	
+		  return res.redirect('/');;
 		}
 	});
 }
@@ -40,13 +40,13 @@ router.post('/signup', [
   User.findOne({ email: req.body.email }, function (error, user) {
       if (error) {
         return next(error);
-      } 
+      }
       if (user) {
         var err = new Error('A user with that email has already registered. Please use a different email.');
         err.status = 401;
         return next(err);
       }
-    });   
+    });
     let errors = validationResult(req);
     if (!errors.isEmpty()) {
       errors= errors.array();
@@ -56,7 +56,7 @@ router.post('/signup', [
       } else {
       let userData = {
         email: req.body.email,
-        password: req.body.pass   
+        password: req.body.pass
     };
     User.create(userData, function (error, user) {
       if (error) {
@@ -66,26 +66,26 @@ router.post('/signup', [
         return res.redirect('/');
       }
     });
-      } 
-});     
-       
+      }
+});
+
 router.post('/login', (req, res, next) => {
 	  if (req.body.email && req.body.pass) {
 	 	  User.authenticate(req.body.email, req.body.pass, function (error, user) {
 	 		  if (error || !user) {
 	 			  let err = new Error('Wrong email or password');
-	 			  err.status = 401;  
+	 			  err.status = 401;
 	 			  return next(err);
 	 		  }else {
 	 			  req.session.userId = user._id;
 	 			 return res.redirect('/');
 	 		  }
-	 	  });     
+	 	  });
     }else {
       let err = new Error('All Fields Required');
   	  res.status = 401;
   	  return next(err);
-    }    
+    }
 });
 
 module.exports = router;

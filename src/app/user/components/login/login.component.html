@@ -18,7 +18,7 @@
             <label for="your_pass"><i class="zmdi zmdi-lock"></i></label>
             <input ngModel #password="ngModel" name="password" type="password" id="pass" placeholder="Password" minlength="8" maxlength="20" required />
           </div>
-
+          <div class="alert" *ngIf="(email.value && password.value) && login.submitted">{{error}}</div>
           <div class="alert" *ngIf="(email.value && password.value) && login.errors">{{ login.errors}}</div>
           <div class="alert" *ngIf="login.submitted && (!email.value || !password.value)">fields cant be empty</div>
 
