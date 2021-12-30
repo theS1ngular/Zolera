@@ -5,7 +5,7 @@ export class UserService {
 constructor(private http: HttpClient) {}
 
 login(email: string, password: string) {
-  const user: User= { _id: null, email: email, password: password }
+  const user: User = { _id: null, email, password };
   this.http.post('http://localhost/login', user)
   .subscribe(() => {
     console.log('success');
@@ -13,7 +13,7 @@ login(email: string, password: string) {
 }
 
 register(email: string, password: string) {
-  const user: User= { _id: null, email: email, password: password }
+  const user: User = { _id: null, email, password };
   this.http.post('http://localhost/signup', user)
   .subscribe(() => {
     console.log('hello win');
