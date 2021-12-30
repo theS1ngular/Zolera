@@ -2,7 +2,6 @@ const app = require("./backend/app");
 const express = require("express");
 const debug = require("debug")("node-angular");
 const http = require("http");
-const dotenv = require("dotenv").config();
 
 app.use(express.static(__dirname, + '/src'))
 
