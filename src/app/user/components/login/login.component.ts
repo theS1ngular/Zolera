@@ -10,9 +10,9 @@ import { UserService } from '../../services/user.service';
 })
 
 export class LoginComponent {
-  userIsAuthenticated : Boolean;
-  error: String;
-  token: String;
+  userIsAuthenticated: boolean;
+  error: string;
+  token: string;
   private authListenerSubs: Subscription;
 
   constructor(public userService: UserService, private router: Router) {}
@@ -22,11 +22,11 @@ export class LoginComponent {
     let email = login.form.value.email;
     let password = login.form.value.password;
     this.userService.login(email, password)
-    .subscribe(token =>{
+    .subscribe(token => {
       this.token = token.token;
       this.router.navigate(['home']);
-    },error=>{
-      this.error= error.error;
+    }, httpError => {
+      this.error = httpError.error;
     });
 
 

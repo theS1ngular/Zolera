@@ -12,22 +12,22 @@ import { UserService } from './../../services/user.service';
 export class RegisterComponent {
 
   constructor(public userService: UserService, private router: Router) {}
-  error: String;
-  user: Object;
+  error: string;
+  user: object;
   userAlreadyExist = false;
 
   onSubmit(register){
     let email = register.form.value.email;
     let password = register.form.value.password;
     this.userService.register(email, password)
-    .subscribe(user =>{
+    .subscribe(user => {
       this.user = user;
       this.router.navigate(['home']);
-    },error=>{
-      this.error= error.error;
+    }, httpError => {
+      this.error = httpError.error;
     });
 
-  };
+  }
 
 }
 
