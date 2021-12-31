@@ -1,7 +1,9 @@
 {
   "name": "zolera",
   "version": "0.0.0",
-  "scripts": {},
+  "scripts": {
+    "start:server": "nodemon ./backend/server.js"
+  },
   "private": true,
   "dependencies": {
     "@hapi/joi": "^17.1.1",

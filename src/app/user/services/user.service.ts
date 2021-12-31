@@ -19,15 +19,15 @@ export class UserService {
   constructor(private http: HttpClient, private router: Router) {}
 
   login(email: string, password: string) {
-    const user: User= { _id: null, email: email, password: password }
+    const user: User = { _id: null, email: email, password: password };
     return this.http.post<{token: string, error: string}>('http://localhost/api/login', user)
-    .pipe(catchError(this.errorHandler))
+    .pipe(catchError(this.errorHandler));
   }
 
   register(email: string, password: string) {
-  const user: User= { _id: null, email: email, password: password }
+  const user: User = { _id: null, email: email, password: password };
   return this.http.post<{user: object, error: string}>('http://localhost/api/signup', user)
-  .pipe(catchError(this.errorHandler))
+  .pipe(catchError(this.errorHandler));
   }
 
   getToken() {
