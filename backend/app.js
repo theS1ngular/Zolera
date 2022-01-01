@@ -38,9 +38,6 @@ app.use(function (req, res, next) {
 	next();
 })
 
-app.use((req, res, next) => {
-  res.sendFile(path.join(__dirname, "index.html"));
-})
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended: false}));
 app.use('/', routes);
