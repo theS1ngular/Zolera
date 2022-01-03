@@ -2,7 +2,7 @@
   "name": "zolera",
   "version": "0.0.0",
   "scripts": {
-    "start:server": "nodemon ./backend/server.js"
+    "start": "node ./backend/server.js"
   },
   "private": true,
   "dependencies": {
