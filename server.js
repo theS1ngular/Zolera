@@ -3,8 +3,6 @@ const express = require("express");
 const debug = require("debug")("node-angular");
 const http = require("http");
 
-app.use(express.static(__dirname, + '/src'))
-
 const normalizePort = val => {
   var port = parseInt(val, 10);
 
