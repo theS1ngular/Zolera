@@ -1,13 +1,14 @@
 {
   "name": "zolera",
   "version": "1.0.0",
-  "scripts": {
-    "start": "node server.js"
-  },
   "engines": {
   "node": "12.16.1",
   "npm": "6.14.5"
   },
+  "scripts": {
+    "start": "node server.js"
+  },
+
   "private": true,
   "dependencies": {
     "@hapi/joi": "^17.1.1",
