@@ -2,8 +2,8 @@
   "name": "zolera",
   "version": "1.1.0",
   "engines": {
-  "node": "12.16.1",
-  "npm": "6.14.5"
+    "node": "12.16.1",
+    "npm": "6.14.5"
   },
   "scripts": {
     "ng": "ng",
@@ -13,19 +13,18 @@
     "lint": "ng lint",
     "e2e": "ng e2e",
     "postinstall": "ng build --aot --prod"
-
   },
   "private": true,
   "dependencies": {
     "@angular/animations": "~10.0.6",
     "@angular/cdk": "^10.2.2",
+    "@angular/cli": "~10.0.5",
     "@angular/common": "~10.0.6",
     "@angular/compiler": "~10.0.6",
+    "@angular/compiler-cli": "~10.0.6",
     "@angular/core": "~10.0.6",
     "@angular/forms": "~10.0.6",
     "@angular/material": "^10.2.2",
-    "@angular/cli": "~10.0.5",
-    "@angular/compiler-cli": "~10.0.6",
     "@angular/platform-browser": "~10.0.6",
     "@angular/platform-browser-dynamic": "~10.0.6",
     "@angular/router": "~10.0.6",
@@ -34,13 +33,14 @@
     "body-parser": "^1.19.0",
     "bootstrap": "^5.0.0-alpha1",
     "connect-mongo": "^3.2.0",
-    "express": "^4.17.1",
+    "express": "^4.17.2",
     "express-session": "^1.17.1",
     "express-validator": "^6.6.1",
     "jsonwebtoken": "^8.5.1",
     "mongodb": "^3.6.2",
     "mongoose": "^5.10.6",
     "ngx-bootstrap": "^6.1.0",
+    "path": "^0.12.7",
     "rxjs": "~6.5.5",
     "save": "^2.4.0",
     "serve": "^13.0.2",
