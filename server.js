@@ -5,12 +5,11 @@ const debug = require("debug")("node-angular");
 const http = require("http");
 
 
-app.use(express.static(__dirname + '/src'));
+app.use(express.static(__dirname + '/dist'));
 
 app.get('/*', function(req,res) {
-  res.sendFile(path.join(__dirname+'/src/index.html'));
+  res.sendFile(path.join(__dirname+'/dist/index.html'));
 });
-
 
   const normalizePort = val => {
     var port = parseInt(val, 10);
