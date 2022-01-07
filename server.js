@@ -1,9 +1,8 @@
-const express = require("express");
-const app = express();
+const express = require('express');
+const app = require('./backend/app');
 const path = require('path');
-const debug = require("debug")("node-angular");
-const http = require("http");
-
+const debug = require('debug')('node-angular');
+const http = require('http');
 
 app.use(express.static(__dirname + '/dist'));
 
